@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import InsightsButton from '../components/InsightsButton'
 
-const InsighsSection = styled.section`
+const InsightsSection = styled.section`
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -22,6 +23,11 @@ const InsightsContainer = styled(Container)`
   @media (max-width: 767px) {
       max-width: 100%;
   }
+`
+
+const InsightsCol = styled(Col)`
+  display: flex;
+  justify-content: space-between;
 `
 
 const TitleDiv = styled.div`
@@ -49,17 +55,18 @@ const TitleH2 = styled.h2`
 
 const Insights = () => {
   return (
-    <InsighsSection>
+    <InsightsSection>
       <InsightsContainer>
         <Row>
-          <Col sm={12} >
+          <InsightsCol sm={12} >
             <TitleDiv>
               <TitleH2>Insights</TitleH2>
             </TitleDiv>
-          </Col>
+            <InsightsButton text="All Blogs" />
+          </InsightsCol>
         </Row>
       </InsightsContainer>
-    </InsighsSection>
+    </InsightsSection>
   )
 }
 
