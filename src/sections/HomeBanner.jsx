@@ -1,0 +1,83 @@
+import React from 'react'
+import styled from 'styled-components'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from '../components/Button'
+
+const HomeBannerSection = styled.section`
+    height: 100svh;
+    background-color: rgb(10, 14, 18);
+    padding-top: 140px;
+    position: relative;
+    overflow: hidden;
+`
+
+const HomeBannerContainer = styled(Container)`
+    position: relative;
+    height: 100%;
+`
+
+const HomeBannerRow = styled(Row)`
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+`
+
+const HomeBannerCol = styled(Col)`
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    h1 {
+        font-size: 80px;
+        line-height: 80px;
+        color: rgb(255, 255, 255);
+    }
+`
+
+const HomeBannerButtonRow = styled(Row)`
+    margin-top: 60px;
+
+    p {
+        color: rgb(153, 153, 153);
+        font-size: 24px;
+        line-height: 32px;
+        margin-left: auto;
+    }
+`
+
+const HomeBanner = () => {
+  return (
+    <HomeBannerSection>
+        <HomeBannerContainer>
+            <HomeBannerRow>
+                <HomeBannerCol sm={10}>
+                    <h1>
+                        <span>
+                            We are obsessed with growth, 
+                            <i>your</i> growth in particular
+                        </span>
+                    </h1>
+                </HomeBannerCol>
+            </HomeBannerRow>
+            <HomeBannerButtonRow>
+                <Col sm={7}>
+                    <Button text="Start your digital journey" />
+                </Col>
+                <Col sm={5}>
+                    <p>
+                        Digitomark is a growth-first marketing studio with 
+                        an obsession for mixing brand and digital media to 
+                        boost your business in new and exciting ways.
+                    </p>
+                </Col>
+            </HomeBannerButtonRow>
+        </HomeBannerContainer>
+    </HomeBannerSection>
+  )
+}
+
+export default HomeBanner

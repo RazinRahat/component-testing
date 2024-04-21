@@ -1,0 +1,230 @@
+import React from 'react'
+import styled from 'styled-components'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+const TitleDiv = styled.div`
+    margin: 0px 0px 120px;
+    position: relative;
+    width: fit-content;
+
+    h2 {
+        font-size: 80px;
+        line-height: 80px;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+    }
+`
+
+const SocialsList = styled.ul`
+    margin: 0px;
+    padding: 0px;
+`
+
+const SocialLink = styled.li`
+    height: 35px;
+    width: 35px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+    list-style: none;
+
+    a {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    a:hover {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+        color: rgb(153, 153, 153);
+        font-weight: 400;
+        margin: 0px; 
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 100%;
+        left: 0px;
+        right: 0px;
+        background-color: rgb(153, 153, 153);
+        border-radius: 50%;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0, 1) 0s;
+    }
+
+    a:hover::after {
+        top: 0px;
+    }
+`
+
+const FacebookIcon = styled(FaFacebookF)`
+    color: rgb(255, 255, 255);
+    height: 12px;
+    position: relative;
+    z-index: 2;
+`
+const TwitterIcon = styled(FaXTwitter)`
+    color: rgb(255, 255, 255);
+    height: 12px;
+    position: relative;
+    z-index: 2;
+`
+const LinkedinIcon = styled(FaLinkedinIn)`
+    color: rgb(255, 255, 255);
+    height: 12px;
+    position: relative;
+    z-index: 2;
+`
+const InstagramIcon = styled(FaInstagram)`
+    color: rgb(255, 255, 255);
+    height: 12px;
+    position: relative;
+    z-index: 2;
+`
+const YoutubeIcon = styled(FaYoutube)`
+    color: rgb(255, 255, 255);
+    height: 12px;
+    position: relative;
+    z-index: 2;
+`
+
+const FooterMenu = styled.div`
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid rgb(255, 255, 255);
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        margin-right: 40px;
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    a {
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+        color: rgb(153, 153, 153);
+    }
+`
+
+const FooterCopyRight = styled.div`
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+    p {
+        font-size: 12px;
+        line-height: 16px;
+        color: rgb(153, 153, 153);
+        font-weight: 400;
+        margin: 0px;
+    }
+`
+
+const Footer = () => {
+  return (
+    <Container>
+        <Row>
+            <Col sm={9}>
+                <TitleDiv>
+                    <h2>
+                        Let's talk about
+                        <br></br>
+                        your next project
+                    </h2>
+                </TitleDiv>
+            </Col>
+            <Col sm={3}>
+                <SocialsList>
+                    <SocialLink>
+                        <a href="https://www.facebook.com/">
+                            <FacebookIcon />
+                        </a>
+                    </SocialLink>
+                    <SocialLink>
+                        <a href="https://www.twitter.com/">
+                            <TwitterIcon />
+                        </a>
+                    </SocialLink>
+                    <SocialLink>
+                        <a href="https://www.linkedin.com/">
+                            <LinkedinIcon />
+                        </a>
+                    </SocialLink>
+                    <SocialLink>
+                        <a href="https://www.instagram.com/">
+                            <InstagramIcon />
+                        </a>
+                    </SocialLink>
+                    <SocialLink>
+                        <a href="https://www.youtube.com/">
+                            <YoutubeIcon />
+                        </a>
+                    </SocialLink>
+                </SocialsList>
+            </Col>
+            <Col sm={12}>
+                <FooterMenu>
+                    <ul>
+                        <li>
+                            <a href="/">Organic Marketing</a>
+                        </li>
+                        <li>
+                            <a href="/">Paid Marketing</a>
+                        </li>
+                        <li>
+                            <a href="/">Creative Design</a>
+                        </li>
+                        <li>
+                            <a href="/">Web Design</a>
+                        </li>
+                        <li>
+                            <a href="/">Copy Writing</a>
+                        </li>
+                        <li>
+                            <a href="/">Visual Arts</a>
+                        </li>
+                    </ul>
+                </FooterMenu>
+                <FooterCopyRight>
+                    <p>
+                    © 2024 Digitomark Limited
+                    </p>
+                </FooterCopyRight>
+            </Col>
+        </Row>
+    </Container>
+  )
+}
+
+export default Footer
