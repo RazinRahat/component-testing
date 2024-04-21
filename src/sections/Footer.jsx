@@ -6,16 +6,37 @@ import Col from 'react-bootstrap/Col'
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+const FooterContainer = styled(Container)`
+    @media (max-width: 1199px) and (min-width: 768px) {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+    }
+`
+
 const TitleDiv = styled.div`
     margin: 0px 0px 120px;
     position: relative;
     width: fit-content;
+`
 
-    h2 {
-        font-size: 80px;
-        line-height: 80px;
-        font-weight: 400;
-        color: rgb(255, 255, 255);
+const TitleH2 = styled.h2`
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+
+    @media (max-width: 991px) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 48px !important;
+        line-height: 48px !important;
     }
 `
 
@@ -149,12 +170,6 @@ const FooterMenu = styled.div`
         padding: 0px;
     }
 
-    li {
-        margin-right: 40px;
-        margin-bottom: 10px;
-        list-style: none;
-    }
-
     a {
         color: rgb(255, 255, 255);
         font-size: 16px;
@@ -168,6 +183,21 @@ const FooterMenu = styled.div`
         outline: none;
         box-shadow: none;
         color: rgb(153, 153, 153);
+    }
+`
+
+const FooterMenuLink = styled.li`
+    margin-right: 40px;
+    margin-bottom: 10px;
+    list-style: none;
+
+    @media (max-width: 575px)
+    /* &:not(:nth-last-of-type(1)) */
+    {
+        margin-bottom: 30px;
+    }
+    @media (max-width: 575px) {
+        width: 100%;
     }
 `
 
@@ -186,15 +216,15 @@ const FooterCopyRight = styled.div`
 
 const Footer = () => {
   return (
-    <Container>
+    <FooterContainer>
         <Row>
             <Col sm={9}>
                 <TitleDiv>
-                    <h2>
+                    <TitleH2>
                         Let's talk about
                         <br></br>
                         your next project
-                    </h2>
+                    </TitleH2>
                 </TitleDiv>
                 <TitleLink href="tel:+88 014 0707 1199">+88 014 0707 1199</TitleLink>
                 <TitleLink href="mailto:info@digitomark.com">info@digitomark.com</TitleLink>
@@ -231,24 +261,24 @@ const Footer = () => {
             <Col sm={12}>
                 <FooterMenu>
                     <ul>
-                        <li>
+                        <FooterMenuLink>
                             <a href="/">Organic Marketing</a>
-                        </li>
-                        <li>
+                        </FooterMenuLink>
+                        <FooterMenuLink>
                             <a href="/">Paid Marketing</a>
-                        </li>
-                        <li>
+                        </FooterMenuLink>
+                        <FooterMenuLink>
                             <a href="/">Creative Design</a>
-                        </li>
-                        <li>
+                        </FooterMenuLink>
+                        <FooterMenuLink>
                             <a href="/">Web Design</a>
-                        </li>
-                        <li>
+                        </FooterMenuLink>
+                        <FooterMenuLink>
                             <a href="/">Copy Writing</a>
-                        </li>
-                        <li>
+                        </FooterMenuLink>
+                        <FooterMenuLink>
                             <a href="/">Visual Arts</a>
-                        </li>
+                        </FooterMenuLink>
                     </ul>
                 </FooterMenu>
                 <FooterCopyRight>
@@ -258,7 +288,7 @@ const Footer = () => {
                 </FooterCopyRight>
             </Col>
         </Row>
-    </Container>
+    </FooterContainer>
   )
 }
 

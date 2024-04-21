@@ -13,6 +13,10 @@ const NavbarSectionWrapper = styled.section`
     left: 0px;
     top: 30px;
     z-index: 9;
+
+    @media (max-width: 991px) {
+        display: none;
+    }
 `
 
 const NavbarContainer = styled(Container)`

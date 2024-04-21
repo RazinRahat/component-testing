@@ -17,7 +17,8 @@ const InsightsSection = styled.section`
 
 const InsightsContainer = styled(Container)`
   @media (max-width: 1199px) and (min-width: 768px) {
-    margin: auto;
+      max-width: 90%;
+      margin: auto;
   }
 
   @media (max-width: 767px) {
