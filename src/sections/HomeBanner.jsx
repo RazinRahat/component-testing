@@ -30,16 +30,27 @@ const HomeBannerCol = styled(Col)`
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
+`
 
-    h1 {
-        font-size: 80px;
-        line-height: 80px;
-        color: rgb(255, 255, 255);
+const HomeBannerColH1 = styled.h1`
+    font-size: 80px;
+    line-height: 80px;
+    color: rgb(255, 255, 255);
+
+    @media (max-width: 991px) {
+        font-size: 40px;
+        line-height: 40px;
     }
 `
 
 const HomeBannerButtonRow = styled(Row)`
     margin-top: 60px;
+
+
+    @media (max-width: 991px) {
+        flex-direction: column-reverse;
+        margin-top: 40px;
+    }
 
     p {
         color: rgb(153, 153, 153);
@@ -49,31 +60,43 @@ const HomeBannerButtonRow = styled(Row)`
     }
 `
 
+const ButtonCol = styled(Col)`
+    @media (max-width: 991px) {
+        min-width: 100%;
+    }
+`
+
+const ParagraphCol = styled(Col)`
+    @media (max-width: 991px) {
+        min-width: 100%;
+    }
+`
+
 const HomeBanner = () => {
   return (
     <HomeBannerSection>
         <HomeBannerContainer>
             <HomeBannerRow>
                 <HomeBannerCol sm={10}>
-                    <h1>
+                    <HomeBannerColH1>
                         <span>
                             We are obsessed with growth, 
                             <i>your</i> growth in particular
                         </span>
-                    </h1>
+                    </HomeBannerColH1>
                 </HomeBannerCol>
             </HomeBannerRow>
             <HomeBannerButtonRow>
-                <Col sm={7}>
+                <ButtonCol sm={7}>
                     <Button text="Start your digital journey" />
-                </Col>
-                <Col sm={5}>
+                </ButtonCol>
+                <ParagraphCol sm={5}>
                     <p>
                         Digitomark is a growth-first marketing studio with 
                         an obsession for mixing brand and digital media to 
                         boost your business in new and exciting ways.
                     </p>
-                </Col>
+                </ParagraphCol>
             </HomeBannerButtonRow>
         </HomeBannerContainer>
     </HomeBannerSection>

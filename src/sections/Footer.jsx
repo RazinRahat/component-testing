@@ -19,9 +19,31 @@ const TitleDiv = styled.div`
     }
 `
 
+const TitleLink = styled.a`
+    font-size: 32px;
+    line-height: 36px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    width: fit-content;
+    transition: color 0.3s ease 0s;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+        color: rgb(153, 153, 153);
+    }
+`
+
 const SocialsList = styled.ul`
     margin: 0px;
     padding: 0px;
+
+    @media (max-width: 575px) {
+        display: flex;
+        margin-top: 50px;
+    }
 `
 
 const SocialLink = styled.li`
@@ -33,6 +55,11 @@ const SocialLink = styled.li`
     margin-bottom: 15px;
     overflow: hidden;
     list-style: none;
+
+    @media (max-width: 575px) {
+        display: flex;
+        margin: 0px 15px;
+    }
 
     a {
         display: flex;
@@ -109,6 +136,12 @@ const FooterMenu = styled.div`
     margin-top: 30px;
     border-top: 1px solid rgb(255, 255, 255);
 
+
+    @media (max-width: 575px) {
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -163,6 +196,8 @@ const Footer = () => {
                         your next project
                     </h2>
                 </TitleDiv>
+                <TitleLink href="tel:+88 014 0707 1199">+88 014 0707 1199</TitleLink>
+                <TitleLink href="mailto:info@digitomark.com">info@digitomark.com</TitleLink>
             </Col>
             <Col sm={3}>
                 <SocialsList>
