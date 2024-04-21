@@ -16,6 +16,15 @@ const HomeBannerSection = styled.section`
 const HomeBannerContainer = styled(Container)`
     position: relative;
     height: 100%;
+
+    @media (max-width: 1199px) and (min-width: 768px) {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+    }
 `
 
 const HomeBannerRow = styled(Row)`
@@ -28,8 +37,6 @@ const HomeBannerRow = styled(Row)`
 const HomeBannerCol = styled(Col)`
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
 `
 
 const HomeBannerColH1 = styled.h1`
@@ -81,7 +88,7 @@ const HomeBanner = () => {
                     <HomeBannerColH1>
                         <span>
                             We are obsessed with growth, 
-                            <i>your</i> growth in particular
+                            <i>your </i> growth in particular
                         </span>
                     </HomeBannerColH1>
                 </HomeBannerCol>

@@ -5,6 +5,18 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 const SuccessCardCol = styled(Col)`
+    @media (max-width: 600px) {
+        margin-bottom: 50px;
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+        min-width: 100%;
+    }
+
+    @media (max-width: 991px) {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
     &:nth-child(2n+1) {
         padding-top: 90px;
         padding-right: 60px;
@@ -66,12 +78,35 @@ const SuccessImageChildContainer = styled.div`
         transform: scale(1.01);
         transition: all 1s cubic-bezier(0.4, 0, 0, 1) 0s;
     }
-
-    /* img:hover { */
-        /* scale: 1.01; */
-    /* } */
 `
 
+const CardContentDiv = styled.div`
+    margin-top: 16px;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+        margin-bottom: 15px;
+        padding: 0px;
+    }
+
+    li {
+        color: rgb(153, 153, 153);
+        position: relative;
+        padding-right: 16px;
+        margin-right: 10px;
+        list-style: none;
+    }
+
+    h4 {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 32px;
+        color: rgb(255, 255, 255);
+        margin: 0px;
+    }
+`
 
 const SuccessCard = () => {
   return (
@@ -88,6 +123,12 @@ const SuccessCard = () => {
                     </picture>
                 </SuccessImageChildContainer>
             </SuccessImageContainer>
+            <CardContentDiv>
+                <ul>
+                    <li>Social Media Marketing</li>
+                </ul>
+                <h4>ReelStar</h4>
+            </CardContentDiv>
         </SuccessCardSection>
     </SuccessCardCol>
   )

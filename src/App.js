@@ -2,7 +2,8 @@
 import './App.css';
 import Footer from './sections/Footer';
 import HomeBanner from './sections/HomeBanner';
-import SuccessSection from './sections/SuccessSection';
+import Insights from './sections/Insights';
+import Success from './sections/Success';
 import Video from './sections/Video';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         <section>
           <HomeBanner />
           <Video />
-          <SuccessSection />
+          <Success />
+          <Insights />
         </section>
         <Footer />
       </div>

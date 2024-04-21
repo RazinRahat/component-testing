@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import SuccessCard from '../components/SuccessCard'
 
 const SuccessContainerSection = styled.section`
+    padding-bottom: 200px;
     @media (max-width: 767px) {
         padding-bottom: 100px;
         padding-top: 100px;
@@ -17,6 +18,14 @@ const SuccessContainer = styled(Container)`
 
     @media (min-width: 1400px) {
         max-width: 1140px;
+    }
+
+    @media (max-width: 991px) {
+        padding-right: 15px;
+    }
+
+    @media (max-width: 767px) {
+        max-width: 100%;
     }
 `
 
@@ -51,54 +60,7 @@ const TitleSpan = styled.span`
     }
 `
 
-const SuccessCardCol = styled(Col)`
-    &:nth-child(2n+1) {
-        padding-top: 90px;
-        padding-right: 60px;
-    }
-
-    &:nth-child(2n+2) {
-        margin-top: -90px;
-        padding-left: 60px;
-    }
-`
-
-const SuccessCardSection = styled.section`
-    position: relative;
-
-    a {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0px;
-        bottom: 0px;
-        z-index: 2;
-        color: rgb(255, 255, 255);
-        font-weight: 400;
-        margin: 0px;
-        transition: color 0.3s ease 0s;
-        text-decoration: none;
-    }
-`
-
-const SuccessImageContainer = styled.div`
-    position: relative;
-    padding-top: calc(110.638%);
-    border-radius: 20px;
-    overflow: hidden;
-`
-
-const SuccessImageChildContainer = styled.div`
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    inset: 0px;
-    margin: 0px;
-    overflow: hidden;
-`
-
-
-const SuccessSection = () => {
+const Success = () => {
   return (
     <SuccessContainerSection>
         <SuccessContainer>
@@ -112,15 +74,15 @@ const SuccessSection = () => {
             </Row>
             <Row>
                 <SuccessCard />
-                {/* <SuccessCardCol sm={6}>
-                    <SuccessCardSection>
-                        <a href="/portfolio/reelstar"></a>
-                    </SuccessCardSection>
-                </SuccessCardCol> */}
+                <SuccessCard />
+                <SuccessCard />
+                <SuccessCard />
+                <SuccessCard />
+                <SuccessCard />
             </Row>
         </SuccessContainer>
     </SuccessContainerSection>
   )
 }
 
-export default SuccessSection
+export default Success
