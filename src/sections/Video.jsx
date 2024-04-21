@@ -8,7 +8,7 @@ const StyledComponent = styled.section`
     padding: 0 !important;
     iframe{
       min-height: 100vh;
-      width: 100%;
+      width: 100vw;
     }
   }
 `;
