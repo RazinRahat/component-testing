@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from '../components/Button'
+import BottomSlider from '../components/BottomSlider'
 
 const HomeBannerSection = styled.section`
     height: 100svh;
@@ -105,6 +106,7 @@ const HomeBanner = () => {
                     </p>
                 </ParagraphCol>
             </HomeBannerButtonRow>
+            <BottomSlider />
         </HomeBannerContainer>
     </HomeBannerSection>
   )

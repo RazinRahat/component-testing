@@ -1,6 +1,5 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import BottomSlider from './components/BottomSlider';
 import Footer from './sections/Footer';
 import HomeBanner from './sections/HomeBanner';
 import Insights from './sections/Insights';
@@ -19,7 +18,6 @@ function App() {
           <Success />
           <Solutions />
           <Insights />
-          <BottomSlider />
         </section>
         <Footer />
       </div>
