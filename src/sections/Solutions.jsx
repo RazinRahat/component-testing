@@ -4,6 +4,9 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import WhatWeDoButton from '../components/WhatWeDoButton'
+import SolutionSwiperComponent from '../components/SolutionsSwiperComponent'
+import ArrowButtonPrev from '../components/ArrowButtonPrev'
+import ArrowButtonNext from '../components/ArrowButtonNext'
 
 const SolutionsSection = styled.section`
     
@@ -66,11 +69,13 @@ const Solutions = () => {
                     <WhatWeDoButton text="What We Do" />
                     <div>
                         <ArrowList>
-
+                            <ArrowButtonPrev />
+                            <ArrowButtonNext />
                         </ArrowList>
                     </div>
                 </ButtonsCol>
             </Row>
+            <SolutionSwiperComponent />
         </SolutionsContainer>
     </SolutionsSection>
   )
