@@ -12,6 +12,35 @@ const BottomSliderWrapper = styled.div`
     right: 15px;
     height: 80px;
     overflow: hidden;
+
+
+    .swiper {
+      width: 100%;
+      height: 80px;
+    }
+
+    .swipper-wrapper {
+      height: 80px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* height: 80px; */
+      /* background: #fff; */
+
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 `
 
 const BottomSlider = () => {

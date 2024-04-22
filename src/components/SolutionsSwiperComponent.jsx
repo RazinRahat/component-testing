@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import './SolutionBottomStyles.css';
+// import './SolutionBottomStyles.css';
 
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
