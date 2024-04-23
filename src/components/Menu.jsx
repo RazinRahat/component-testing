@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import HamBurgerDesktop from './HamBurgerDesktop'
+import MenuItems from './MenuItems'
 
 const MenuWrapper = styled.div`
     cursor: pointer;
     width: 340px;
-    height: 48px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     -webkit-box-align: center;
@@ -24,6 +25,8 @@ const MenuTop = styled.div`
     justify-content: space-between;
     width: 100%;
     cursor: pointer;
+    background-color: rgba(38, 38, 38, 0.48);
+    backdrop-filter: blur(80px);
 
     h4 {
       font-size: 16px;
@@ -41,6 +44,7 @@ const Menu = () => {
             <h4>Home</h4>
             <HamBurgerDesktop />
         </MenuTop>
+        <MenuItems />
     </MenuWrapper>
   )
 }

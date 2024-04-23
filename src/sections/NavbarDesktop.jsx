@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Menu from '../components/Menu'
 import ContactUsButton from '../components/ContactUsButton'
-import Logo from '../components/Logo'
+import Logo from '../components/LogoDesktop'
 
 const NavbarSectionWrapper = styled.section`
     position: fixed;
@@ -20,50 +20,59 @@ const NavbarSectionWrapper = styled.section`
 `
 
 const NavbarContainer = styled(Container)`
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
 
-    @media (min-width: 1400px) {
-        max-width: 1140px;
-    }
+    @media (max-width: 1199px) and (min-width: 768px) {
+        max-width: 90%;
+        margin: auto;
+    }   
 `
 const NavbarRow = styled(Row)`
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+    /* margin-left: -15px;
+    margin-right: -15px; */
 `
 
 const LogoMenuWrapper = styled(Col)`
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    padding-left: 15px;
+    padding-right: 15px;
 `
 const ContactUsButtonWrapper = styled(Col)`
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 15px;
+    padding-right: 15px;
 `
 
 const NavbarDesktop = () => {
-  return (
-    <NavbarSectionWrapper>
-        <NavbarContainer>
-            <NavbarRow>
-                <LogoMenuWrapper sm={6}>
-                    <Logo />
-                    <Menu />
-                </LogoMenuWrapper>
-                <ContactUsButtonWrapper sm={6}>
-                    <ContactUsButton />
-                </ContactUsButtonWrapper>
-            </NavbarRow>     
-        </NavbarContainer>
-    </NavbarSectionWrapper>
-  )
+    useEffect(() => {
+        let getHamburgerClick = document.querySelector('#hamburgerdesktop')
+    
+        return () => {
+        
+        }
+    }, [])
+    
+    return (
+        <NavbarSectionWrapper>
+            <NavbarContainer>
+                <NavbarRow>
+                    <LogoMenuWrapper sm={6}>
+                        <Logo />
+                        <Menu />
+                    </LogoMenuWrapper>
+                    <ContactUsButtonWrapper sm={6}>
+                        <ContactUsButton />
+                    </ContactUsButtonWrapper>
+                </NavbarRow>     
+            </NavbarContainer>
+        </NavbarSectionWrapper>
+    )
 }
 
 export default NavbarDesktop;
