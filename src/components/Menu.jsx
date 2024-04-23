@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import HamBurger from './HamBurger'
+import HamBurgerDesktop from './HamBurgerDesktop'
 
 const MenuWrapper = styled.div`
     cursor: pointer;
@@ -39,7 +39,7 @@ const Menu = () => {
     <MenuWrapper>
         <MenuTop>
             <h4>Home</h4>
-            <HamBurger />
+            <HamBurgerDesktop />
         </MenuTop>
     </MenuWrapper>
   )

@@ -18,7 +18,27 @@ const HamBurgerContainer = styled.div`
 
     span:nth-child(1) {
         top: 0px;
+        transform: none;
+        width: 8px;
+    }
+
+    span:nth-child(2) {
+        top: 5px;
+        width: 15px;
+        opacity: 1;
+    }
+
+    span:nth-child(3) {
+        top: 10px;
+        left: 0px;
+        transform: none;
+        width: 8px;
+    }
+
+    /* span:nth-child(1) {
+        top: 0px;
         transform: ${({ isActive }) => isActive ? 'rotate(45deg) translateY(7px)' : 'none'};
+        width: ${({ isActive }) => isActive ? '15px' : '8px'};
     }
 
     span:nth-child(2) {
@@ -31,7 +51,8 @@ const HamBurgerContainer = styled.div`
         top: 10px;
         left: 0px;
         transform: ${({ isActive }) => isActive ? 'rotate(-45deg) translateY(-7px)' : 'none'};
-    }
+        width: ${({ isActive }) => isActive ? '15px' : '8px'};
+    } */
 
     &:hover span {
         width: 15px;
@@ -39,14 +60,13 @@ const HamBurgerContainer = styled.div`
 
 `
 
-const HamBurger = () => {
-    const [isActive, setIsActive] = useState(false);
-
-    const handleClick = () => {
-        setIsActive(!isActive);
-    };
+const HamBurgerMobile = () => {
+    // const [active, setActive] = useState(false);
+    // const handleClick = () => {
+    //     setIsActive(!isActive);
+    // };
     return (
-        <HamBurgerContainer onClick={handleClick} isActive={isActive}>
+        <HamBurgerContainer id="hamburgermobile">
             <span></span>
             <span></span>
             <span></span>
@@ -54,4 +74,4 @@ const HamBurger = () => {
     )
 }
 
-export default HamBurger
+export default HamBurgerMobile
