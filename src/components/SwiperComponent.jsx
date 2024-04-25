@@ -12,11 +12,14 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import SwiperLogo from './SwiperLogo';
 
 export default function SwiperComponent() {
+  const delayArray = [2000, 4000, 6000, 8000, 10000]
+  const randomIndex = Math.floor(Math.random() * delayArray.length);
+  const randomElement = delayArray[randomIndex];
   return (
     <>
       <Swiper 
         autoplay={{
-            delay: 3000,
+            delay: randomElement,
             disableOnInteraction: false,
         }}
         direction={'vertical'} 

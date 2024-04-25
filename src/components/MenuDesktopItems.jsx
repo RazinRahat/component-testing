@@ -32,7 +32,7 @@ const MenuDesktopItemsDiv = styled.div`
             width: 15px;
             height: 10px;
             position: relative;
-            margin: auto 0;
+            margin: 5px 0 auto;
 
             span {
                 height: 1px;
@@ -71,7 +71,7 @@ const MenuDesktopItemsDiv = styled.div`
         }
     }
 
-    /* .menu-slided {
+    .menu-slided {
         .menu-desktop__items__top__hamburger {
             span {
                 width: 16px;
@@ -91,7 +91,7 @@ const MenuDesktopItemsDiv = styled.div`
                 }
             }
         }
-    } */
+    }
 `
 
 const MenuDesktopItems = () => {

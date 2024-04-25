@@ -34,7 +34,7 @@ const NavbarMobileTop = styled.div`
     backdrop-filter: blur(80px);
     border-radius: 8px;
 
-    &.activeHamburger {
+    .activeHamburger {
         span {
             height: 1px;
             background-color: rgb(255, 255, 255);
@@ -81,7 +81,7 @@ const NavbarMobile = () => {
                     gsap.to('#navbaritems', {x: '0px', duration: 0.5})
                 } else {
                     getHamburgerClick.classList.add("activeHamburger")
-                    gsap.to('#navbaritems', {x: '100vw', duration: 0.5})
+                    gsap.to('#navbaritems', {x: '100%', duration: 0.5})
                 }
             })
         }

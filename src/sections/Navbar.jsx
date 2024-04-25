@@ -45,6 +45,40 @@ const NavbarDesktop = styled.section`
             }
         }
     }
+
+    .activeHamburger{
+        span {
+            height: 1px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            right: 0px;
+            width: 8px;
+            transition: all 1s cubic-bezier(0.4, 0, 0, 1) 0s;
+        }
+
+        span:nth-child(1) {
+            top: 0px;
+            transform: rotate(45deg) translateY(7px);
+            width: 15px;
+        }
+
+        span:nth-child(2) {
+            top: 5px;
+            width: 15px;
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            top: 10px;
+            left: 0px;
+            transform: rotate(-45deg) translateY(-7px);
+            width: 15px;
+        }
+
+        &:hover span {
+            width: 15px;
+        }
+    }
 `
 
 const DesktopContainer = styled(Container)`
@@ -70,6 +104,7 @@ const Navbar = () => {
         document.querySelector('.menu-desktop__items__top').addEventListener('click', function () {
             if (!document.querySelector('.menu-desktop').classList.contains("menu-slided")) {
                 document.querySelector('.menu-desktop').classList.add("menu-slided")
+                document.querySelector('.menu-desktop__items__top__hamburger').classList.add("activeHamburger")
                 console.log(document.querySelector('.menu-slided'))
                 tl.to(".menu-desktop__items__slide", .4, {
                     opacity: 1
@@ -94,6 +129,7 @@ const Navbar = () => {
                 },).to(".menu-desktop__items", .4, {
                     height: "48px"
                 }, "-=.5")
+                document.querySelector('.menu-desktop__items__top__hamburger').classList.remove("activeHamburger")
                 document.querySelector('.menu-desktop').classList.remove("menu-slided")
             }
         });
@@ -160,7 +196,7 @@ const Navbar = () => {
                 <DesktopContainer>
                     <DesktopRow>
                         <Col sm={6} className={"d-flex"}>
-                            <LogoDesktop />
+                            <LogoDesktop class="menu-desktop__items__top__hamburger" />
                             <MenuDesktopItems />
                         </Col>
                         <Col sm={6} className={"menu-desktop__contact"}>

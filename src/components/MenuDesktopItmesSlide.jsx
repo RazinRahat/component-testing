@@ -60,7 +60,7 @@ const MenuDesktopItemsDiv = styled.div`
 
         ul {
             li {
-                margin-bottom: 18px !important;
+                /* margin-bottom: 18px !important; */
                 position: relative;
                 font-size: 16px;
                 line-height: 20px;

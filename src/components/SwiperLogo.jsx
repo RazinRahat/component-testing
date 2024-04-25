@@ -17,9 +17,13 @@ const SwiperLogoWrapper = style.li`
 `
 
 const SwiperLogo = () => {
+  const logoArray = ["1711382992NkKTp", "1711382844ZuV7X", "17113830936T5tK", "1711383554dRpeM", "17113832049FGMi", "1711383605gThBT"]
+  const randomIndex = Math.floor(Math.random() * logoArray.length);
+  const randomElement = logoArray[randomIndex];
+  const src = "https://bestinbd.com/projects/web/Digitomark/admin/uploads/gallery/banner-logo-gallery/" + randomElement + ".svg";
   return (
     <SwiperLogoWrapper>
-        <img src="https://bestinbd.com/projects/web/Digitomark/admin/uploads/gallery/banner-logo-gallery/17113832901Tf7R.svg" alt="" />
+        <img src={src} alt="" />
     </SwiperLogoWrapper>
   )
 }

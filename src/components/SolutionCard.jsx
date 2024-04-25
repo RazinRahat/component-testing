@@ -26,7 +26,27 @@ const ImageContainer = styled.div`
     position: relative;
     border-radius: 15px;
     overflow: hidden;
+
+    .solution-image {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        inset: 0px;
+        transition: all 1.4s ease 0s;
+    }
+
+    .icon-top {
+        position: absolute;
+        z-index: 2;
+        bottom: 30px;
+        left: 30px;
+        max-width: 100%;
+        object-fit: contain;
+    }
 `
+
 
 const ImageWrapper = styled.div`
 position: absolute;
@@ -35,16 +55,6 @@ position: absolute;
     inset: 0px;
     margin: 0px;
     overflow: hidden;   
-`
-
-const SolutionImage = styled.img`
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    inset: 0px;
-    transition: all 1.4s ease 0s;
 `
 
 const ContentWrapper = styled.div`
@@ -78,9 +88,10 @@ const SolutionCard = () => {
             <ImageWrapper>
                 <picture>
                     <source media="(max-width:650px)" srcset="https://bestinbd.com/projects/web/Digitomark/admin/uploads/1709465512QpHtW.jpg" />
-                    <SolutionImage src="https://bestinbd.com/projects/web/Digitomark/admin/uploads/1709465512QpHtW.jpg" alt="https://bestinbd.com/projects/web/Digitomark/admin/uploads/1709465512QpHtW.jpg" />
+                    <img class="solution-image" src="https://bestinbd.com/projects/web/Digitomark/admin/uploads/1709465512QpHtW.jpg" alt="https://bestinbd.com/projects/web/Digitomark/admin/uploads/1709465512QpHtW.jpg" />
                 </picture>
             </ImageWrapper>
+            <img class="icon-top" src="https://bestinbd.com/projects/web/Digitomark/admin/uploads/1709475140UcwBx.svg" alt="" />
         </ImageContainer>
         <ContentWrapper>
             <ContentTitle>

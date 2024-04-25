@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ContactUsButtonMobile from '../components/ContactUsButtonMobile'
 
 const NavbarMobileItemsWrapper = styled.div`
-    display: block;
+    /* display: none; */
     translate: none;
     rotate: none;
     scale: none;
