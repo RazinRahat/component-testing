@@ -99,7 +99,7 @@ const JoinUsButton = styled.div`
 
 const MenuItems = () => {
   return (
-    <MenuDiv>
+    <MenuDiv id="menuitems">
         <OpenMenuList>
             <OpenMenuListItems>
                 <a href="/home">

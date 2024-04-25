@@ -19,7 +19,7 @@ const SwiperLogoWrapper = style.li`
 const SwiperLogo = () => {
   return (
     <SwiperLogoWrapper>
-        <img src="https://bestinbd.com/projects/web/Digitomark/admin/uploads/gallery/banner-logo-gallery/1711382992NkKTp.svg" alt="" />
+        <img src="https://bestinbd.com/projects/web/Digitomark/admin/uploads/gallery/banner-logo-gallery/17113832901Tf7R.svg" alt="" />
     </SwiperLogoWrapper>
   )
 }

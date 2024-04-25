@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
 
 const ServicesDiv = styled.div`
-    background-color: rgba(38, 38, 38, 0.48);
+    background-color: rgba(38, 38, 38, .48);
     backdrop-filter: blur(80px);
     padding: 24px;
     border-radius: 8px;
@@ -11,103 +11,76 @@ const ServicesDiv = styled.div`
     h4 {
         font-size: 24px;
         line-height: 32px;
-        font-weight: 400;
-        color: rgb(255, 255, 255);
+        color: #ffffff;
         padding-bottom: 15px;
-        margin: 0;
         margin-bottom: 20px;
         border-bottom: 1px solid rgba(112, 112, 112, 0.53);
     }
-`
 
-const ServicesList = styled.ul`
-    margin: 0;
-    padding: 0;
-`
+    ul {
+        color: white;
+        li {
+            margin-bottom: 18px !important;
+            position: relative;
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
 
-const ServicesListItem = styled.li`
-    position: relative;
-    font-size: 16px;
-    line-height: 20px;
-    cursor: pointer;
-    margin-bottom: 18px;
-    list-style: none;
+            svg {
+                padding-left: 5px;
+                opacity: 0;
+                transition: .6s all cubic-bezier(0.4, 0, 0, 1) 0s;
+            }
 
-    a {
-        font-size: 16px;
-        line-height: 20px;
-        display: flex;
-        align-items: center;
-        color: rgb(255, 255, 255);
-        font-weight: 400;
-        margin: 0px;
-        transition: color 0.3s ease 0s;
-        text-decoration: none;
-    }
+            a {
+              font-size: 16px;
+              line-height: 20px;
+            }
 
-    a:hover {
-        text-decoration: none;
-        outline: none;
-        box-shadow: none;
-    }
-`
+            ul:nth-last-of-type(1) {
+              margin-bottom: 0 !important;
+            }
 
-const Arrow = styled(FaArrowRight)`
-    max-width: 100%;
-    object-fit: contain;
-    padding-left: 5px;
-    opacity: 0;
-    height: 16px;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0, 1) 0s;
-
-    &:hover {
-        opacity: 1;
-        margin-left: 10px;
+            ul:hover {
+              svg {
+                opacity: 1;
+                margin-left: 10px;
+              }
+            }
+        }
     }
 `
 
 const Services = () => {
   return (
-    <ServicesDiv>
+    <ServicesDiv className="menu-desktop__items__slide__subs as-service-sub">
         <h4>Services</h4>
-        <ServicesList>
-            <ServicesListItem>
-                <a href="/">
-                    Insight & Strategy
-                    <Arrow />
-                </a>
-            </ServicesListItem>
-            <ServicesListItem>
-                <a href="/">
-                    Brand Identity
-                    <Arrow />
-                </a>
-            </ServicesListItem>
-            <ServicesListItem>
-                <a href="/">
-                    Organic Marketing
-                    <Arrow />
-                </a>
-            </ServicesListItem>
-            <ServicesListItem>
-                <a href="/">
-                    Paid Marketing
-                    <Arrow />
-                </a>
-            </ServicesListItem>
-            <ServicesListItem>
-                <a href="/">
-                    Digital Design
-                    <Arrow />
-                </a>
-            </ServicesListItem>
-            <ServicesListItem>
-                <a href="/">
-                    Photography & More
-                    <Arrow />
-                </a>
-            </ServicesListItem>
-        </ServicesList>
+        <ul>
+            <li>
+                Insight & Strategy 
+                <FaArrowRight />
+            </li>
+            <li>
+                Brand Identity
+                <FaArrowRight />
+            </li>
+            <li>
+                Organic Marketing 
+                <FaArrowRight />
+            </li>
+            <li>
+                Paid Marketing 
+                <FaArrowRight />
+            </li>
+            <li>
+                Digital Design 
+                <FaArrowRight />
+            </li>
+            <li>
+                Photography & Video 
+                <FaArrowRight />
+            </li>
+        </ul>
     </ServicesDiv>
   )
 }
